@@ -7,7 +7,7 @@ var destination2;
 var destination3;
 var stack = [];
 
-function setup(threshold=0.25) {
+function setup() {
 	
 	createCanvas(420,420);
 	cols = floor(width/w);
@@ -16,7 +16,7 @@ function setup(threshold=0.25) {
 
 	for (var r = 0; r < rows; r++) {
 		for (var c = 0; c < cols; c++) {
-			var cell = Math.random() < threshold ? new Cell(c, r, true) : new Cell(c, r);
+			var cell = Math.random() < 0.25 ? new Cell(c, r, true) : new Cell(c, r);
 			grid.push(cell);
 		}
 	}
